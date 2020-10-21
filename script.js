@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Twitch Live Preview
 // @namespace    https://github.com/d3xtr0/twitch-live-preview
-// @version      1.1
+// @version      1.2
 // @description  Hover channels & clips for a preview
 // @author       d3xtr0
 // @match        https://www.twitch.tv/*
@@ -24,7 +24,7 @@
                         streamname.lastIndexOf("/clip/") + 6,
                         streamname.lastIndexOf("?") >= 0 ? streamname.lastIndexOf("?") : streamname.length
                     );
-                    iframesrc = "https://clips.twitch.tv/embed?clip="+clipString+"&muted=true&controls=false&parent=twitch.tv";
+                    iframesrc = "https://clips.twitch.tv/embed?clip="+clipString+"&muted=true&controls=false&parent=twitch.tv&autoplay=true";
                 }else{
                     iframesrc = "https://player.twitch.tv/?channel="+streamname.replace("/","")+"&muted=true&controls=false&parent=twitch.tv";
                 }
